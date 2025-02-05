@@ -9,3 +9,7 @@
 .bg-about{
     background-image: url('https://images.pexels.com/photos/1337825/pexels-photo-1337825.jpeg?auto=compress&cs=tinysrgb&w=600');
 }
+
+.bg-menu{
+    background-image: url("../src/assets/menupic.png");
+}

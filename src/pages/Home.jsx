@@ -6,7 +6,7 @@ import Service from './Service';
 import WhoWeAre from './WhoWeAre';
 import Choose from './Choose';
 import Progress from './Progress';
-import Contact from './Contact';
+
 
 const HomePage = () => {
   const homeRef = useRef(null);
@@ -65,9 +65,9 @@ const HomePage = () => {
       <div ref={progressRef} >
         <Progress/>
       </div> 
-      <div ref={progressRef} >
+      {/* <div ref={progressRef} >
         <Contact/>
-      </div> 
+      </div>  */}
     </div>
   );
 };

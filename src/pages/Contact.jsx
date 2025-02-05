@@ -3,7 +3,8 @@ import { AiOutlineArrowRight } from "react-icons/ai"; // Import the arrow icon
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[400px] mt-24 p-4 bg-[#F3F3F3]">
+   <div className="w-full flex justify-center items-center">
+     <div className="flex flex-col w-[1729px] items-center justify-center h-[351px] mt-24 p-4 bg-[#F3F3F3]">
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 text-black">
         Looking for a Quality Construction?
       </h1>
@@ -16,6 +17,7 @@ const Contact = () => {
         <AiOutlineArrowRight className="ml-2 text-xl" />
       </a>
     </div>
+   </div>
   );
 };
 
