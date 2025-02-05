@@ -1,0 +1,11 @@
+
+ @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-img{
+    background-image: url('./assets/buffalo.png');
+}
+.bg-about{
+    background-image: url('https://images.pexels.com/photos/1337825/pexels-photo-1337825.jpeg?auto=compress&cs=tinysrgb&w=600');
+}
