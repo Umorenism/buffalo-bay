@@ -6,7 +6,7 @@ import Service from './Service';
 import WhoWeAre from './WhoWeAre';
 import Choose from './Choose';
 import Progress from './Progress';
-
+import heroPic from '../../src/assets/heroImg.png'
 
 const HomePage = () => {
   const homeRef = useRef(null);
@@ -24,14 +24,14 @@ const HomePage = () => {
     <div className="min-h-screen  flex flex-col w-full">
       <div
         ref={homeRef}
-        className=" bg-cover h-screen  bg-center relative"
+        className=" bg-cover h-screen bg-center relative"
         style={{
           backgroundImage:
-            "url('https://s3-alpha-sig.figma.com/img/ea06/e341/6baf67ccf4d0130122ebf648adf58332?Expires=1739750400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=jjfUUkaPCts2mPjiXGisDE5fXG5nsYCI1OE-4BFSreNmxwu88eA-rNGA3pRAX9ZrQqT0N7A6XSWRb~J4fhrlE-LCDdaLcCIy90Cub-Bc5es07GrzyPDmO-Xstm49YCap70dN8BAI-B10jMNzk8X~tYWUZhevpZ2P6Um9slqmv0lCHAG0C6nfRoCniZVcrTeSXogyFukHECxnLAOWQwC5xHnA31IQLIIMCb4Bu~kiJhZOKaqvVabGp93NJteqeb6mZDGsWFgq02T0U3ZxTmbTnV8e2p624uo0X6f2Cn-OklIBE5eiWOJxnKOzTBpba70-jOfwPUHmuKR-M0S2t4TTeQ__')",
+            `url(${heroPic})`,
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center p-4">
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4">
             Buffalo <span className="text-[#ECB35C]">&</span> Bay Ltd
           </h1>
           <p className="text-lg mb-6">Building the future, one project at a time</p>
@@ -47,7 +47,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div ref={aboutRef} >
+      <div  ref={aboutRef} >
         <About />
       </div>
 

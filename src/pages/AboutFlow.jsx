@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import picImage from "../../src/assets/aboutimg.png";
 import openImage from "../../src/assets/open.png";
-
+import { motion } from "framer-motion";
 const AboutFlow = () => {
   const counters = [26, 400, 23, 61000, 3];
   const [counts, setCounts] = useState(counters.map(() => 0));
@@ -41,31 +41,31 @@ const AboutFlow = () => {
       <div className="py-10 md:mt-[150px] w-full flex justify-center items-center">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 text-center text-white">
           <div>
-            <h1 className="text-3xl font-bold text-[#6D142A]">
+            <h1 className="text-5xl font-bold text-[#6D142A]">
               {Math.floor(counts[0])}
             </h1>
             <p className="text-sm text-slate-900">Years in the Industry</p>
           </div>
           <div>
-            <h1 className="text-3xl font-bold text-[#6D142A]">
+            <h1 className="text-5xl font-bold text-[#6D142A]">
               {Math.floor(counts[1])}+
             </h1>
             <p className="text-sm text-slate-900">Satisfied</p>
           </div>
           <div>
-            <h1 className="text-3xl font-bold text-[#6D142A]">
+            <h1 className="text-5xl font-bold text-[#6D142A]">
               {Math.floor(counts[2])}
             </h1>
             <p className="text-sm text-slate-900">Completed projects</p>
           </div>
           <div>
-            <h1 className="text-3xl font-bold text-[#6D142A]">
+            <h1 className="text-5xl font-bold text-[#6D142A]">
               {Math.floor(counts[3])}+
             </h1>
             <p className="text-sm text-slate-900">Built area</p>
           </div>
           <div>
-            <h1 className="text-3xl font-bold text-[#6D142A]">
+            <h1 className="text-5xl font-bold text-[#6D142A]">
               {Math.floor(counts[4])}
             </h1>
             <p className="text-sm text-slate-900">Upcoming</p>
@@ -145,8 +145,15 @@ const AboutFlow = () => {
       <hr />
 
       <div className="py-10 md:mt-[150px] w-full flex justify-center items-center">
-        <img src={openImage} alt="About" className="w-full h-auto max-w-5xl object-cover" />
-      </div>
+  <motion.img 
+    src={openImage} 
+    alt="About" 
+    className="w-full h-auto max-w-5xl object-cover"
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+  />
+</div>
     </div>
   );
 };

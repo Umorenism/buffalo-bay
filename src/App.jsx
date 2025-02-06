@@ -7,7 +7,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import { Footer } from "./component/Footer";
 
-
 import ProjectDes from "./pages/ProjectDes";
 import ProjectWork from "./pages/Project";
 import Contact from "./pages/Contact";
@@ -15,11 +14,12 @@ import Contact from "./pages/Contact";
 import AboutFlow from "./pages/AboutFlow";
 import CompanyServices from "./pages/CompanyServices";
 
+import ContactService from "./pages/ContactService";
+
 const App = () => {
   return (
     <>
       <Router>
-        
         <Routes>
           <Route
             index
@@ -91,8 +91,22 @@ const App = () => {
               </>
             }
           />
+          <Route
+            path="/contact-us"
+            element={
+              <>
+                <Header
+                  title="Buffalo & BAY"
+                  desc="Strength and Splendor"
+                  bgColor="bg-transparent"
+                  textColor="text-white"
+                />
+                <ContactService />
+              </>
+            }
+          />
         </Routes>
-        <Contact/>
+        <Contact />
         <Footer />
       </Router>
     </>

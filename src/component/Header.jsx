@@ -43,12 +43,14 @@ const Header= ({ desc,menubg, title, bgColor = 'bg-white', textColor = 'text-bla
         </div>
 
         <nav className="hidden md:flex space-x-4 items-center">
-          <div className={`h-20 w-[0.01rem]${menubg} ${textColor}`}></div>
+          <div className={`h-20 bg-white w-[0.01rem]${menubg} ${textColor}`}></div>
+          <p className="h-14 bg-white w-[0.01rem]"></p>
           <div onClick={toggleMenuOpen} className="cursor-pointer flex flex-col items-center gap-2">
+            
             {isMenuOpen ? (
-              <TiTabsOutline size={35} onClick={closeMenu} />
+              <IoMdClose size={40} onClick={closeMenu} />
             ) : (
-              <TbMenu size={30} />
+              <TbMenu size={40} />
             )}
             <h1 className="font-bold">Menu</h1>
           </div>
@@ -73,7 +75,7 @@ const Header= ({ desc,menubg, title, bgColor = 'bg-white', textColor = 'text-bla
                         </Link>
                       </div>
                     </div>
-                    <IoMdClose size={35} onClick={closeMenu} />
+                   
                   </div>
                   <div className="mt-2 p-2 flex">
                     <HeaderMenu />
