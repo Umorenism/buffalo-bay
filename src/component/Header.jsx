@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { TiTabsOutline, TiThMenu } from "react-icons/ti";
+
 import { TbMenu } from "react-icons/tb";
 import { IoMdClose } from "react-icons/io";
 import HeaderMenu from "./HeaderMenu";
@@ -87,7 +87,7 @@ const Header= ({ desc,menubg, title, bgColor = 'bg-white', textColor = 'text-bla
         </nav>
 
         <button className="md:hidden" onClick={toggleMenu}>
-          {isOpen ? <TiTabsOutline size={28} /> : <TiThMenu size={28} />}
+          {isOpen ? <IoMdClose size={28} /> : <TbMenu size={28} />}
         </button>
       </div>
       <hr />
@@ -98,25 +98,25 @@ const Header= ({ desc,menubg, title, bgColor = 'bg-white', textColor = 'text-bla
             animate="visible"
             exit="exit"
             variants={mobileMenuVariants}
-            className="fixed inset-0 bg-black/90 text-white shadow-lg md:hidden z-50"
+            className="fixed inset-0 bg-white text-black shadow-lg md:hidden z-50"
           >
-            <div className="flex justify-end p-4">
-              <TiTabsOutline size={28} onClick={toggleMenu} className="cursor-pointer" />
+            <div className="flex justify-center items-center mt-20 p-4">
+              {isMenuOpen ? <IoMdClose size={28} onClick={toggleMenu} className="cursor-pointer" />:<IoMdClose size={28} onClick={toggleMenu} className="cursor-pointer" />}
             </div>
             <div className="flex flex-col items-center p-4 space-y-4">
-              <Link to="/" className="py-2 text-lg" onClick={toggleMenu}>
-                Home
+              <Link to="/about-us" className="py-2 text-lg" onClick={toggleMenu}>
+               About Buffalo & Bay
               </Link>
-              <Link to="/about" className="py-2 text-lg" onClick={toggleMenu}>
-                About
+              <Link to="/pro-ject" className="py-2 text-lg" onClick={toggleMenu}>
+               Project
               </Link>
-              <Link to="/mission" className="py-2 text-lg" onClick={toggleMenu}>
-                Mission
+              <Link to="/service" className="py-2 text-lg" onClick={toggleMenu}>
+               Service
               </Link>
-              <Link to="/achievement" className="py-2 text-lg" onClick={toggleMenu}>
-                Achievement
+              <Link to="/projectdes" className="py-2 text-lg" onClick={toggleMenu}>
+               Package
               </Link>
-              <Link to="/contact" className="py-2 text-lg" onClick={toggleMenu}>
+              <Link to="/contact-us" className="py-2 text-lg" onClick={toggleMenu}>
                 Contact
               </Link>
             </div>

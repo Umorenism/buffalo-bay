@@ -9,11 +9,11 @@ const HeaderMenu = () => {
     <div className='min-h-[50px] flex'>
       {/* Left Section */}
       <div className="w-1/3 bg-gray-100 p-4 mt-10">
-       <Link to="/">
+       <Link to="/about-us">
        <h1 className="text-2xl font-bold mb-4">About Buffalo & <br />Bay</h1>
        </Link>
         <div className='h-[0.1rem] mb-1 w-[50%] bg-orange-500'></div>
-        <Link to="/projectdes">
+        <Link to="/pro-ject">
         <h2 className="text-2xl font-bold mb-4">Projects</h2>
         </Link>
         <div className='h-[0.1rem] mb-1  w-[50%] bg-orange-500'></div>
@@ -21,11 +21,11 @@ const HeaderMenu = () => {
         <h2 className="text-2xl font-bold mb-4">Services</h2>
         </Link>
         <div className='h-[0.1rem] mb-1  w-[50%] bg-orange-500'></div>
-        <Link to="/pro-ject">
+        <Link to="/projectdes">
         <h2 className="text-2xl font-bold mb-4">Packages</h2>
         </Link>
         <div className='h-[0.1rem] mb-1  w-[50%] bg-orange-500'></div>
-        <Link to="/contact">
+        <Link to="/contact-us">
         <h2 className="text-2xl font-bold mb-4">Contact</h2>
         </Link>
         <div className='mt-20'>
